@@ -42,7 +42,11 @@ describe('OrdersService', () => {
         userId: 1,
         name: 'User1',
         orderId: 1,
-        products: [{ productId: 1, value: 100 }],
+        products: [
+          { productId: 1, value: 100 },
+          { productId: 2, value: 200 },
+          { productId: 3, value: 300 },
+        ],
         date: new Date(),
       },
       {
@@ -73,9 +77,13 @@ describe('OrdersService', () => {
         orders: [
           {
             order_id: 1,
-            total: '100.00',
+            total: '600.00',
             date: expect.any(String),
-            products: [{ product_id: 1, value: '100.00' }],
+            products: [
+              { product_id: 1, value: '100.00' },
+              { product_id: 2, value: '200.00' },
+              { product_id: 3, value: '300.00' },
+            ],
           },
           {
             order_id: 2,
